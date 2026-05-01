@@ -1,0 +1,12 @@
+{
+  "name": "Nhắc cập nhật spec sau milestone",
+  "version": "1.0.0",
+  "description": "Sau khi hoàn thành task, kiểm tra xem đây có phải task cuối của milestone không. Nếu đúng, nhắc cập nhật 6 file spec liên quan.",
+  "when": {
+    "type": "postTaskExecution"
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "Milestone vừa hoàn thành một task. Kiểm tra xem đây có phải task cuối cùng của milestone không. Nếu đúng, nhắc cập nhật: 04-task-list.md (check off tasks), 03-execution-plan.md (validation gate), 00-overview.md (status), 07-rollout-plan.md (preconditions), 09-codex-review.md (findings), 05-decision-log.md (decisions mới)."
+  }
+}

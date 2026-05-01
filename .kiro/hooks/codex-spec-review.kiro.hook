@@ -1,0 +1,12 @@
+{
+  "name": "Codex Spec Review",
+  "version": "1.0.0",
+  "description": "Chạy Codex CLI để review toàn bộ spec pack theo evaluation framework. Cập nhật {feature-slug} trong command trước khi dùng.",
+  "when": {
+    "type": "userTriggered"
+  },
+  "then": {
+    "type": "runCommand",
+    "command": "codex exec --full-auto --skip-git-repo-check \"Read all files in .kiro/specs/{feature-slug}/ (00-overview.md through 09-codex-review.md) and docs/spec-evaluation-framework.md. Score the spec 0-5 on: Problem Framing, Scope Discipline, Domain Completeness, Technical Realism, Execution Readiness, Reviewability, Change Resilience. List findings by severity (Critical, High, Medium, Low). Write results into .kiro/specs/{feature-slug}/09-codex-review.md.\""
+  }
+}
